@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-01-11T06:10:58.063Z",
+    "end": "2026-01-11T06:11:07.576Z",
+    "duration": 9513,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e08f4a62-c598-478d-aa3a-b4ce98ed0c3e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\buy.cy.js",
+      "file": "cypress\\e2e\\buy.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39b64b86-ba05-416d-850c-6975e885bc42",
+          "title": "Buy",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Block Login",
+              "fullTitle": "Buy Block Login",
+              "timedOut": null,
+              "duration": 6182,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\buy.cy.js\\\\login.png\",\n      \"\\\\buy.cy.js\\\\Buy -- Block Login (failed).png\"\n    ]\n  ]\n}",
+              "code": "_loginPage.default.visit();\n_loginPage.default.username().type(scenario.username);\n_loginPage.default.password().type(scenario.password);\n_loginPage.default.submit().click();\ncy.screenshot('login');\nif (scenario.description === 'Block Login') {\n  cy.get('[data-test=\"error\"]').should('contain', 'Sorry this user has been locked out.');\n} else {\n  cy.url().should('include', '/inventory.html');\n  _productPage.default.addBackpack().click();\n  _productPage.default.addBoltTshirt().click();\n  _productPage.default.cart().click();\n  cy.url().should('include', '/cart.html');\n  _productPage.default.checkout().click();\n  cy.url().should('include', '/checkout-step-one.html');\n}",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h3>' to contain 'Sorry this user has been locked out.'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h3>' to contain 'Sorry this user has been locked out.'\n    at Context.eval (webpack://cypress/./cypress/e2e/buy.cy.js:15:46)",
+                "diff": null
+              },
+              "uuid": "c5a32fba-2383-4180-89ee-ddb5269bb252",
+              "parentUUID": "39b64b86-ba05-416d-850c-6975e885bc42",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Successful Remove",
+              "fullTitle": "Buy Successful Remove",
+              "timedOut": null,
+              "duration": 1716,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\buy.cy.js\\\\login (1).png\"\n    ]\n  ]\n}",
+              "code": "_loginPage.default.visit();\n_loginPage.default.username().type(scenario.username);\n_loginPage.default.password().type(scenario.password);\n_loginPage.default.submit().click();\ncy.screenshot('login');\nif (scenario.description === 'Block Login') {\n  cy.get('[data-test=\"error\"]').should('contain', 'Sorry this user has been locked out.');\n} else {\n  cy.url().should('include', '/inventory.html');\n  _productPage.default.addBackpack().click();\n  _productPage.default.addBoltTshirt().click();\n  _productPage.default.cart().click();\n  cy.url().should('include', '/cart.html');\n  _productPage.default.checkout().click();\n  cy.url().should('include', '/checkout-step-one.html');\n}",
+              "err": {},
+              "uuid": "67859f14-2952-4084-a47f-8adc2a12b955",
+              "parentUUID": "39b64b86-ba05-416d-850c-6975e885bc42",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67859f14-2952-4084-a47f-8adc2a12b955"
+          ],
+          "failures": [
+            "c5a32fba-2383-4180-89ee-ddb5269bb252"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "Relatório de testes",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

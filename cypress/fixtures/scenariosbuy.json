@@ -1,0 +1,15 @@
+{
+    "scenariosRemove": [
+        {
+            "description": "Block Login",
+            "username": "locked_out_user",
+            "password": "secret_sauce"
+        
+    },
+        {
+            "description": "Successful Remove",
+            "username": "standard_user",
+            "password": "secret_sauce"
+        }
+    ]
+}

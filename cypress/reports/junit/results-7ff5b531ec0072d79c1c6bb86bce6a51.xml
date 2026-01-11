@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="9.513" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-01-11T06:10:58" tests="0" file="cypress\e2e\buy.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Buy" timestamp="2026-01-11T06:10:58" tests="2" time="9.511" failures="1">
+    <testcase name="Buy Block Login" time="0.000" classname="Block Login">
+      <failure message="Timed out retrying after 4000ms: expected &apos;&lt;h3&gt;&apos; to contain &apos;Sorry this user has been locked out.&apos;" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: expected '<h3>' to contain 'Sorry this user has been locked out.'
+    at Context.eval (webpack://cypress/./cypress/e2e/buy.cy.js:15:46)]]></failure>
+    </testcase>
+    <testcase name="Buy Successful Remove" time="1.716" classname="Successful Remove">
+    </testcase>
+  </testsuite>
+</testsuites>

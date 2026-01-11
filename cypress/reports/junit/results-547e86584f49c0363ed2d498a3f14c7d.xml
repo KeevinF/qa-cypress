@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.215" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-01-11T06:11:08" tests="0" file="cypress\e2e\login.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Login e fluxo de compra" timestamp="2026-01-11T06:11:08" tests="3" time="3.214" failures="0">
+    <testcase name="Login e fluxo de compra Login: $cenario.description" time="0.897" classname="Login: $cenario.description">
+    </testcase>
+    <testcase name="Login e fluxo de compra Login: $cenario.description" time="0.680" classname="Login: $cenario.description">
+    </testcase>
+    <testcase name="Login e fluxo de compra Login: $cenario.description" time="0.670" classname="Login: $cenario.description">
+    </testcase>
+  </testsuite>
+</testsuites>

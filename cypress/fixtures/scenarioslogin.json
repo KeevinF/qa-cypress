@@ -1,0 +1,19 @@
+{
+  "cenariosLogin": [
+	{
+	  "description": "Block Login",
+	  "username": "locked_out_user",
+	  "password": "secret_sauce"
+	},
+	{
+	  "description": "Error Login",
+	  "username": "admin",
+	  "password": "secret_sauce"
+	},
+	{
+	  "description": "Standart User",
+	  "username": "standard_user",
+	  "password": "secret_sauce"
+	}
+  ]
+}
