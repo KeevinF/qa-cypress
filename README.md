@@ -51,7 +51,7 @@ Node.js (v12 ou superior)
 Git
 ------------------------------------------------------------------------------------------------------------------------------------------------
 # Clone o repositório
-git clone [https://github.com/KeevinF/qa-cypress.git](https://github.com/KeevinF/qa-cypress.git)
+git clone https://github.com/KeevinF/qa-cypress.git
 
 # Acesse a pasta
 cd qa-cypress
