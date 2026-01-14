@@ -1,19 +1,20 @@
-import {cenariosLogin} from '../fixtures/scenarioslogin.json'
-import loginPage from '../page/loginPage.js'
-import productPage from '../page/productPage.js'
-describe('Login e fluxo de compra', () => {
-    cenariosLogin.forEach((cenario) => {
-        it('Login: $cenario.description', () => {
-            loginPage.visit()
-            loginPage.username().type(cenario.username)
-            loginPage.password().type(cenario.password)
-            loginPage.submit().click()
+import { scenariosLogin } from '../fixtures/scenarioslogin.json'
+import ProductPage from '../page/productPage.js'
 
+describe('Login e fluxo de compra', () => {
+    scenariosLogin.forEach((cenario) => {
+        
+        it(`Login: ${cenario.description}`, () => {
+            
+            // Olha como substitui aquelas 4 linhas por 1 só:
+            cy.login(cenario.username, cenario.password)
+
+            // A lógica continua igual:
             if (cenario.description === 'Standard User') {
-                productPage.addBackpack().click()
-                productPage.addBoltTshirt().click()
-                productPage.cart().click()
-                productPage.checkout().click()
+                ProductPage.addBackpack().click()
+                ProductPage.addBoltTshirt().click()
+                ProductPage.cart().click()
+                ProductPage.checkout().click()
             }
         })
     })

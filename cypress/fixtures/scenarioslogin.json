@@ -1,5 +1,5 @@
 {
-  "cenariosLogin": [
+  "scenariosLogin": [
 	{
 	  "description": "Block Login",
 	  "username": "locked_out_user",
